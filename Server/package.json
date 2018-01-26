@@ -1,0 +1,11 @@
+{
+	"name": "MathGame-Server",
+	"author": "TiCubius <ktartiere@gmail.com>",
+	"version": "1.0.0",
+	"main": "server.js",
+	"license": "MIT",
+	"dependencies": {
+		"colors": "^1.1.2",
+		"socket.io": "^2.0.4"
+	}
+}

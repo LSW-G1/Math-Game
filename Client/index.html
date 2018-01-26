@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MathGame 2.00 - Mutliplayer</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="assets/css/app.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	</head>
+	<body>
+
+		<div class="timer"></div>
+		<div class="alert" id="alert"></div>
+
+		<div class="home">
+			<h2 class="title">Math Game - Multiplayer</h2>
+			<h3 class="subtitle">Create or join a session</h3>
+
+			<div class="actionGroup">
+				<button id="HJoin" class="btn">CREATE/JOIN A SESSION</button>
+			</div>
+		</div>
+
+		<div class="sessionManager delete">
+			<h2 class="title">Math Game - Multiplayer</h2>
+			<h3 class="subtitle">Join a new Session</h3>
+
+			<div id="SMPlay" class='actionGroup delete hidden'>
+				<button class='btn'>Start !</button>
+			</div>
+
+			<div id="SMActions" class="actionGroup">
+				<input class="input" id="SMUsername" type="text" placeholder="Username">
+				<input class="input" id="SMName" type="text" placeholder="Session Name">
+				
+				<button class="btn" id="SMConfirm">Create</button>
+			</div>
+
+			<div class="playersList hidden delete">
+				<h2 class="title">Players</h2>
+				<ul class="players">
+				</ul>
+			</div>
+		</div>
+
+		<div class="game delete">
+			<h2 id="equation" class="title equation">Ready ?</h2>
+
+			<div class="actionGroup">
+				<input type="text" id="answer" class="input" placeholder="Answer">
+			</div>
+		</div>
+
+		<div class="audio">
+			<audio class="calm" preload loop>
+				<source src="assets/music/calm.wav" type="audio/wav">
+			</audio>
+
+			<audio class="stress" preload loop>
+				<source src="assets/music/stress.wav" type="audio/wav">
+			</audio>
+		</div>
+
+		<script defer type="text/javascript" src="assets/js/lib/require.js"></script>
+		<script defer type="text/javascript" src="assets/js/app.js"></script>
+	</body>
+</html>

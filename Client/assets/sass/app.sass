@@ -1,0 +1,181 @@
+@import "_reset"
+
+*
+  box-sizing: border-box
+  font-family: "Roboto", sans-serif !important
+
+/* -- BASE ELEMENTS --  */
+
+html, body
+  margin: 0
+  padding: 0
+
+  display: flex
+
+  color: #FFF
+  background: #1A1A1A
+
+
+b
+  font-weight: bold
+
+button
+  color: #FFFFFF
+  outline: none
+  background: transparent
+
+  border: 2px solid #FF6700
+  padding: 10px 20px
+
+h1, h2, h3, h4, h5, h6
+  color: #FF6700
+  font-weight: bold
+
+  font-size: 32px
+  text-transform: uppercase
+
+
+div.timer, div.alert
+  opacity: 0
+  height: 100%
+  width: 100%
+  position: absolute
+  background: red
+
+  z-index: 1
+
+div.alert
+  z-index: 5
+  background: green  
+
+/* -- PAGES ELEMENTS --  */
+div.hidden
+  opacity: 0 !important
+
+div.delete
+  display: none !important
+
+div.home, div.sessionManager, div.game
+  display: flex
+  flex-direction: column
+
+  opacity: 5
+  z-index: 10
+
+  width: 100vw
+  height: 100vh
+
+  justify-content: center
+  align-items: center
+
+  .title
+    letter-spacing: 2px
+
+  .subtitle
+    color: #EEE
+    font-size: 18px
+
+    letter-spacing: 1px
+    margin-top: 10px
+
+  div.actionGroup
+    display: flex
+    flex-direction: column
+
+    margin: 35px
+
+    &.input
+      margin-top: 5px
+
+  button
+    margin: 5px 0 10px
+
+  #equation
+    &.flash
+      animation: flashtext 1s linear infinite
+
+
+  input
+    padding: 10px 20px
+    outline: none
+
+    border: 2px solid #FF6700
+
+    color: #FFF
+    background: transparent
+
+    margin: 5px 0 10px
+
+    &::placeholder
+      color: #FFF
+
+    &:read-only
+      color: grey
+
+    &.flash
+      animation: flashinput 1s linear infinite
+
+div.playersList
+  position: absolute
+  top: 50vh
+  right: 25px
+
+  opacity: 0
+
+  padding: 10px 20px
+  border: 2px solid #FF6700
+  transform: translateY(-50%)
+
+  .title
+    text-align: center
+    font-size: 18px
+    margin-bottom: 10px
+
+
+
+@keyframes timer
+  000%
+    transform: translateY(-100%)
+    opacity: .25
+
+  100%
+    transform: translateY(-0%)
+    opacity: .25
+
+@keyframes stopTimer
+  000%
+    opacity: .25
+
+  100% 
+    opacity: 0
+
+@keyframes flashinput
+  000%
+    border: 2px solid #FF6700
+
+  050%
+    border: 2px solid #595959
+
+  100%
+    border: 2px solid #FF6700
+
+
+@keyframes flashtext
+  000%
+    color: #FF6700
+
+  050%
+    color: white
+
+  100%
+    color: #FF6700
+
+@keyframes alert
+  000%
+    opacity: 0
+
+  050%
+    opacity: .25
+
+  100%
+    opacity: 0

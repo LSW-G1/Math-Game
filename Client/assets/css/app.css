@@ -1,0 +1,471 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	font: inherit;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+	border: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after {
+	content: '';
+	content: none;
+}
+
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+
+* {
+	font-family: 'Roboto', sans-serif !important;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+/* -- BASE ELEMENTS --  */
+html,
+body {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	background: #1a1a1a;
+}
+
+b {
+	font-weight: bold;
+}
+
+button {
+	padding: 10px 20px;
+	color: #fff;
+	border: 2px solid #ff6700;
+	outline: none;
+	background: transparent;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: 32px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #ff6700;
+}
+
+div.timer,
+div.alert {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	background: red;
+}
+
+div.alert {
+	z-index: 5;
+	background: green;
+}
+
+/* -- PAGES ELEMENTS --  */
+div.hidden {
+	opacity: 0 !important;
+}
+
+div.delete {
+	display: none !important;
+}
+
+div.home,
+div.sessionManager,
+div.game {
+	z-index: 10;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+	opacity: 5;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+}
+
+div.home .title,
+div.sessionManager .title,
+div.game .title {
+	letter-spacing: 2px;
+}
+
+div.home .subtitle,
+div.sessionManager .subtitle,
+div.game .subtitle {
+	font-size: 18px;
+	margin-top: 10px;
+	letter-spacing: 1px;
+	color: #eee;
+}
+
+div.home div.actionGroup,
+div.sessionManager div.actionGroup,
+div.game div.actionGroup {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	margin: 35px;
+}
+
+div.home div.actionGroup.input,
+div.sessionManager div.actionGroup.input,
+div.game div.actionGroup.input {
+	margin-top: 5px;
+}
+
+div.home button,
+div.sessionManager button,
+div.game button {
+	margin: 5px 0 10px;
+}
+
+div.home #equation.flash,
+div.sessionManager #equation.flash,
+div.game #equation.flash {
+	-webkit-animation: flashtext 1s linear infinite;
+	        animation: flashtext 1s linear infinite;
+}
+
+div.home input,
+div.sessionManager input,
+div.game input {
+	margin: 5px 0 10px;
+	padding: 10px 20px;
+	color: #fff;
+	border: 2px solid #ff6700;
+	outline: none;
+	background: transparent;
+}
+
+div.home input::-webkit-input-placeholder,
+div.sessionManager input::-webkit-input-placeholder,
+div.game input::-webkit-input-placeholder {
+	color: #fff;
+}
+
+div.home input:-ms-input-placeholder,
+div.sessionManager input:-ms-input-placeholder,
+div.game input:-ms-input-placeholder {
+	color: #fff;
+}
+
+div.home input::-ms-input-placeholder,
+div.sessionManager input::-ms-input-placeholder,
+div.game input::-ms-input-placeholder {
+	color: #fff;
+}
+
+div.home input::placeholder,
+div.sessionManager input::placeholder,
+div.game input::placeholder {
+	color: #fff;
+}
+
+div.home input:-moz-read-only,
+div.sessionManager input:-moz-read-only,
+div.game input:-moz-read-only {
+	color: grey;
+}
+
+div.home input:read-only,
+div.sessionManager input:read-only,
+div.game input:read-only {
+	color: grey;
+}
+
+div.home input.flash,
+div.sessionManager input.flash,
+div.game input.flash {
+	-webkit-animation: flashinput 1s linear infinite;
+	        animation: flashinput 1s linear infinite;
+}
+
+div.playersList {
+	position: absolute;
+	top: 50vh;
+	right: 25px;
+	padding: 10px 20px;
+	-webkit-transform: translateY(-50%);
+	        transform: translateY(-50%);
+	opacity: 0;
+	border: 2px solid #ff6700;
+}
+
+div.playersList .title {
+	font-size: 18px;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+@-webkit-keyframes timer {
+	000% {
+		-webkit-transform: translateY(-100%);
+		        transform: translateY(-100%);
+		opacity: .25;
+	}
+
+	100% {
+		-webkit-transform: translateY(0%);
+		        transform: translateY(0%);
+		opacity: .25;
+	}
+}
+
+@keyframes timer {
+	000% {
+		-webkit-transform: translateY(-100%);
+		        transform: translateY(-100%);
+		opacity: .25;
+	}
+
+	100% {
+		-webkit-transform: translateY(0%);
+		        transform: translateY(0%);
+		opacity: .25;
+	}
+}
+
+@-webkit-keyframes stopTimer {
+	000% {
+		opacity: .25;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes stopTimer {
+	000% {
+		opacity: .25;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes flashinput {
+	000% {
+		border: 2px solid #ff6700;
+	}
+
+	050% {
+		border: 2px solid #595959;
+	}
+
+	100% {
+		border: 2px solid #ff6700;
+	}
+}
+
+@keyframes flashinput {
+	000% {
+		border: 2px solid #ff6700;
+	}
+
+	050% {
+		border: 2px solid #595959;
+	}
+
+	100% {
+		border: 2px solid #ff6700;
+	}
+}
+
+@-webkit-keyframes flashtext {
+	000% {
+		color: #ff6700;
+	}
+
+	050% {
+		color: white;
+	}
+
+	100% {
+		color: #ff6700;
+	}
+}
+
+@keyframes flashtext {
+	000% {
+		color: #ff6700;
+	}
+
+	050% {
+		color: white;
+	}
+
+	100% {
+		color: #ff6700;
+	}
+}
+
+@-webkit-keyframes alert {
+	000% {
+		opacity: 0;
+	}
+
+	050% {
+		opacity: .25;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes alert {
+	000% {
+		opacity: 0;
+	}
+
+	050% {
+		opacity: .25;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
